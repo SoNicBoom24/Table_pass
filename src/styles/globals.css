@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @layer components {
-  #__next {
+  /* #__next {
     @apply min-h-full flex justify-center items-center;
-  }
-  
+  } */
+
   html, body {
     @apply h-full w-full;
   }
