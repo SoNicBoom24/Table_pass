@@ -27,6 +27,7 @@ export default function Home() {
 
             <div className="grid col-span-2 col-end-7 relative w-[30rem] h-[58rem] -right-60">
               <Image src="/images/home.jpg" 
+              alt="home"
               // width={700} height={500}
               layout='fill'
               objectFit='cover'

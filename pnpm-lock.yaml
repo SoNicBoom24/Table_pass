@@ -7,17 +7,20 @@ specifiers:
   '@material-tailwind/react': ^1.4.2
   '@mui/material': ^5.12.0
   '@popperjs/core': ^2.11.6
+  '@react-oauth/google': ^0.10.0
   '@types/react-router-dom': ^5.3.3
   autoprefixer: 10.4.14
   bootstrap: ^5.2.3
   eslint: 8.38.0
   eslint-config-next: 13.3.0
   framer-motion: ^10.12.2
+  gapi-script: ^1.2.0
   next: 13.3.0
   postcss: 8.4.21
   react: 18.2.0
   react-bootstrap: ^2.7.3
   react-dom: 18.2.0
+  react-google-login: ^5.2.2
   react-icons: ^4.8.0
   react-router-dom: ^6.10.0
   tailwindcss: 3.3.1
@@ -27,23 +30,26 @@ dependencies:
   '@chakra-ui/react': 2.5.5_5hr4nv2p62a3eokcovnb4zmiyi
   '@emotion/react': 11.10.6_react@18.2.0
   '@emotion/styled': 11.10.6_3og6jmu6wvzuytygvdoxepq3x4
-  '@material-tailwind/react': 1.4.2
+  '@material-tailwind/react': 1.4.2_biqbaboplfbrettd7655fr4n2y
   '@mui/material': 5.12.0_fbxtuirhogpez7m7qjkm3itwca
   '@popperjs/core': 2.11.7
+  '@react-oauth/google': 0.10.0_biqbaboplfbrettd7655fr4n2y
   '@types/react-router-dom': 5.3.3
   autoprefixer: 10.4.14_postcss@8.4.21
   bootstrap: 5.2.3_@popperjs+core@2.11.7
   eslint: 8.38.0
   eslint-config-next: 13.3.0_voubu7prgxjfsfbgx5d4sqnwiy
   framer-motion: 10.12.2_biqbaboplfbrettd7655fr4n2y
+  gapi-script: 1.2.0
   next: 13.3.0_biqbaboplfbrettd7655fr4n2y
   postcss: 8.4.21
   react: 18.2.0
   react-bootstrap: 2.7.4_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
+  react-google-login: 5.2.2_biqbaboplfbrettd7655fr4n2y
   react-icons: 4.8.0_react@18.2.0
   react-router-dom: 6.10.0_biqbaboplfbrettd7655fr4n2y
-  tailwindcss: 3.3.1
+  tailwindcss: 3.3.1_postcss@8.4.21
   typescript: 5.0.4
 
 packages:
@@ -1410,8 +1416,11 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: false
 
-  /@material-tailwind/react/1.4.2:
+  /@material-tailwind/react/1.4.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-XJ1Ie8xXMV2qZEtm0LgnJNK+8Lh1Si8TvOf0jKWGI2rHleD8U/Zype6k1AyRhBHHUwc6B19w8uR1fCIFvumURQ==}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
     dependencies:
       '@floating-ui/react': 0.19.2_biqbaboplfbrettd7655fr4n2y
       classnames: 2.3.2
@@ -1758,6 +1767,16 @@ packages:
     dependencies:
       '@swc/helpers': 0.4.14
       react: 18.2.0
+    dev: false
+
+  /@react-oauth/google/0.10.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-uyMFAv3i3PdYeAuuyL8wJuzbKi5sxRuz+68DKPKvonK1IinIeEW1UibkipxHiaSEZxubQUSwcVuMgj8dbWw4+g==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@remix-run/router/1.5.0:
@@ -2982,6 +3001,10 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: false
 
+  /gapi-script/1.2.0:
+    resolution: {integrity: sha512-NKTVKiIwFdkO1j1EzcrWu/Pz7gsl1GmBmgh+qhuV2Ytls04W/Eg5aiBL91SCiBM9lU0PMu7p1hTVxhh1rPT5Lw==}
+    dev: false
+
   /get-intrinsic/1.2.0:
     resolution: {integrity: sha512-L049y6nFOuom5wGyRc3/gdTLO94dySVKRACj1RmJZBQXlbTMhtNIgkWkUHq+jYmZvKf14EW1EoJnnjbmoHij0Q==}
     dependencies:
@@ -3967,6 +3990,19 @@ packages:
       use-sidecar: 1.1.2_react@18.2.0
     dev: false
 
+  /react-google-login/5.2.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-JUngfvaSMcOuV0lFff7+SzJ2qviuNMQdqlsDJkUM145xkGPVIfqWXq9Ui+2Dr6jdJWH5KYdynz9+4CzKjI5u6g==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^16 || ^17
+      react-dom: ^16 || ^17
+    dependencies:
+      '@types/react': 18.0.35
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /react-icons/4.8.0_react@18.2.0:
     resolution: {integrity: sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==}
     peerDependencies:
@@ -4358,10 +4394,12 @@ packages:
     resolution: {integrity: sha512-Y17eDp7FtN1+JJ4OY0Bqv9OA41O+MS8c1Iyr3T6JFLnOgLg3EvcyMKZAnQ8AGyvB5Nxm3t9Xb5Mhe139m8QT/g==}
     dev: false
 
-  /tailwindcss/3.3.1:
+  /tailwindcss/3.3.1_postcss@8.4.21:
     resolution: {integrity: sha512-Vkiouc41d4CEq0ujXl6oiGFQ7bA3WEhUZdTgXAhtKxSy49OmKs8rEfQmupsfF0IGW8fv2iQkp1EVUuapCFrZ9g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3

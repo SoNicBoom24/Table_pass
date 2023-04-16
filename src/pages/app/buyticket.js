@@ -18,30 +18,30 @@ import { HiOutlineTicket } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 
-import Confirmbuy from "../app/confirmbuy";
-
-// import { useSearchParams, Routes, Route, useParams } from "react-router-dom";
-
 export default function BuyTicket() {
   const router = useRouter();
-  const navigation = (url) => {
-    router.push(url);
-  };
 
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
-    useNumberInput({
-      step: 1,
+  useNumberInput({
+    step: 1,
       defaultValue: 1,
       min: 1,
       max: 10,
       precision: 0,
     });
+    
+    const inc = getIncrementButtonProps();
+    const dec = getDecrementButtonProps();
+    const input = getInputProps();
+    
+    const navigation = (url) => {
+      router.push({
+        pathname: url,
+        query: {ticket: input.value},
+      });
+    };
 
-  const inc = getIncrementButtonProps();
-  const dec = getDecrementButtonProps();
-  const input = getInputProps();
-
-  console.log(input.value);
+    console.log(input.value);
   return (
     <>
       <Navbar />

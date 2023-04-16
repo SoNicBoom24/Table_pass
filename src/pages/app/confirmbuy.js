@@ -4,12 +4,9 @@ import { Card, CardBody, CardHeader, Stack, StackDivider, Text, Heading, Box, In
 import { useRouter } from "next/router";
 import Image from 'next/image';
 
-import { useSearchParams, Routes, Route, useParams } from "react-router-dom";
-
 export default function Card_Food() {
-
     const router = useRouter();
-
+    const val = router.query.ticket;
     const navigation = (url) => router.push(url);
 
     return (
@@ -33,10 +30,10 @@ export default function Card_Food() {
                                 </div>
                                 <div className="col-span-2">
                                     <p className='text-2xl pb-10 flex'>ร้านไอสลัดผัก</p>
-                                    <p className='text-2xl pb-10 flex'>2 ใบ</p>
-                                    <p className='text-2xl pb-10 flex'>2 ท่าน</p>
+                                    <p className='text-2xl pb-10 flex'>{val} ใบ</p>
+                                    <p className='text-2xl pb-10 flex'>{val} ท่าน</p>
                                     <p className='text-2xl pb-10 flex'>450 บาท</p>
-                                    <p className='text-2xl pb-10 flex'>900 บาท</p>
+                                    <p className='text-2xl pb-10 flex'>{val*450} บาท</p>
                                 </div>
                                 <div className="col-span-2 justify-center items-center">
                                     <Image
@@ -51,7 +48,7 @@ export default function Card_Food() {
                                             <Button variant='solid' colorScheme="blackAlpha" onClick={() => navigation('/app/confirmbuy')}>
                                                 บันทึก QR Code
                                             </Button>
-                                            <Button variant='solid' colorScheme="" className="bg-black" onClick={() => navigation('/app/confirmbuy')}>
+                                            <Button variant='solid' colorScheme="" className="bg-black" onClick={() => navigation('/app/ticket')}>
                                                 ชำระเรียบร้อย
                                             </Button>
                                         </ButtonGroup>

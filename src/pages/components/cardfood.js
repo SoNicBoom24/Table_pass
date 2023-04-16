@@ -16,6 +16,7 @@ export default function Card_Food() {
                 <LinkOverlay onClick={() => navigation('/app/buyticket')}>
                     <CardBody>
                         <Image
+                            alt="food"
                             src='/images/food.jpg'
                             width={600} height={400}
                             className="rounded-xl"
@@ -31,6 +32,7 @@ export default function Card_Food() {
                 <LinkOverlay onClick={() => navigation('/app/buyticket')}>
                     <CardBody>
                         <Image
+                            alt="food"
                             src='/images/food.jpg'
                             width={600} height={400}
                             className="rounded-xl"
