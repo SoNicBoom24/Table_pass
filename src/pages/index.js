@@ -2,8 +2,7 @@ import { Button, Input} from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { SiClockify } from "react-icons/si";
 import Navbar from "./components/navbar";
-import Image from 'next/image'
-
+import Image from 'next/image';
 import Card_Food from "./components/cardfood";
 
 
@@ -15,9 +14,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col justify-center items-center w-full gap-14 mb-5">
+      <main className="flex flex-col justify-center items-center w-full gap-14 mb-5 overflow-hidden">
         <>
-          <div className="grid grid-cols-6 gap-2 w-full justify-center items-center h-96">
+          <div className="grid grid-cols-6 gap-2 w-full justify-center items-center h-[58rem] relative ">
             <div className="col-start-2 col-span-2">
               <p className='text-5xl pb-10 flex justify-center items-end'>The Meal With Queueless</p>
               <div className="flex border-2 p-1">
@@ -26,10 +25,12 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid col-span-2 col-end-7 place-items-end">
-              <Image src="/images/home.jpg" width={700} height={500} sizes="(max-width: 1000px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw" />
+            <div className="grid col-span-2 col-end-7 relative w-[30rem] h-[58rem] -right-60">
+              <Image src="/images/home.jpg" 
+              // width={700} height={500}
+              layout='fill'
+              objectFit='cover'
+               />
             </div>
           </div>
         </>
