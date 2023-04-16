@@ -22,7 +22,6 @@ import {
 export default function My_Navbar() {
   const router = useRouter();
   const home = () => router.replace("/");
-  const navigation = (url) => router.push(url);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
@@ -30,7 +29,7 @@ export default function My_Navbar() {
 
   return (
     <>
-      <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 border-b-2 bg-white">
+      <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 border-b-2 bg-white drop-shadow-lg">
         <div className="flex items-center justify-between">
           <Button className="flex cursor-pointer" onClick={home}>
             {/* <Button className="flex cursor-pointer" onClick={() => navigation('/app/buyticket')}> */}

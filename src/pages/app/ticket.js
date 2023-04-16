@@ -17,7 +17,6 @@ export default function Ticket() {
                         <p className='flex text-3xl ml-3'>รายระเอียดบัตร</p>
                     </div>
                 </div>
-
                 <div className="grid grid-cols-6 gap-2 w-full justify-center items-center">
                     <MyTicket />
                     <MyTicket />
