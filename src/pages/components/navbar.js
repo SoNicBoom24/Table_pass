@@ -15,8 +15,8 @@ export default function My_Navbar() {
         <>
             <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 border-b-2 bg-white">
                 <div className="flex items-center justify-between">
-                    {/* <Button className="flex cursor-pointer" onClick={home}> */}
-                    <Button className="flex cursor-pointer" onClick={() => navigation('/app/buyticket')}>
+                    <Button className="flex cursor-pointer" onClick={home}>
+                    {/* <Button className="flex cursor-pointer" onClick={() => navigation('/app/buyticket')}> */}
                         <GiSandsOfTime size='40' />
                         <Typography className="mr-4  py-1.5 font-medium text-xl">
                             Table Pass

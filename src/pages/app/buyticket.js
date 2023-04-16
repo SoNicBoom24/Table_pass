@@ -10,7 +10,7 @@ import { FiPhone } from "react-icons/fi";
 export default function BuyTicket() {
 
   const router = useRouter();
-  const backToHome = () => router.replace('/');
+  const navigation = (url) => router.push(url);
 
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
     useNumberInput({
@@ -58,7 +58,7 @@ export default function BuyTicket() {
             </CardBody>
 
             <CardFooter>
-              <Button variant='solid' colorScheme='' className="bg-black ml-10">
+              <Button variant='solid' colorScheme='' className="bg-black ml-10" onClick={() => navigation('/app/confirmbuy')}>
                 Buy Ticket
               </Button>
             </CardFooter>

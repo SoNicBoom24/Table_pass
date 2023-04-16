@@ -8,11 +8,12 @@ import Image from 'next/image'
 export default function Card_Food() {
 
     const router = useRouter();
+    const navigation = (url) => router.push(url);
 
     return (
         <>
             <Card className="col-start-2 col-span-2 p-3" _hover={{ bg: "gray.200" }}>
-                <LinkOverlay href='#'>
+                <LinkOverlay onClick={() => navigation('/app/buyticket')}>
                     <CardBody>
                         <Image
                             src='/images/food.jpg'
@@ -27,7 +28,7 @@ export default function Card_Food() {
             </Card>
 
             <Card className="col-start-4 col-span-2 p-3" _hover={{ bg: "gray.200" }}>
-                <LinkOverlay href='#'>
+                <LinkOverlay onClick={() => navigation('/app/buyticket')}>
                     <CardBody>
                         <Image
                             src='/images/food.jpg'
