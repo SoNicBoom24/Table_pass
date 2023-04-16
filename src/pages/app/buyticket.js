@@ -1,23 +1,11 @@
 import { useRouter } from "next/router";
-import { Button, } from "@chakra-ui/react";
+import { Button, useNumberInput, HStack, Input, Card, CardBody, CardFooter, Text, Heading, Stack } from "@chakra-ui/react";
 import Navbar from "../components/navbar";
 import Image from 'next/image'
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineTicket } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
-import { Card, CardBody, CardFooter, Text, Heading, Stack } from "@chakra-ui/react";
-
-import {
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
-  useNumberInput,
-  HStack,
-  Input,
-} from '@chakra-ui/react'
 
 export default function BuyTicket() {
 
@@ -46,8 +34,6 @@ export default function BuyTicket() {
           direction={{ base: 'column', sm: 'row' }}
           overflow='hidden'
           variant='outline'
-          // minWidth={900}
-          // maxWidth={1500}
         >
           <Image
             maxW={{ base: '100%', sm: '200px' }}
