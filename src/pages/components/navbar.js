@@ -26,7 +26,7 @@ export default function My_Navbar() {
                         <Button className="flex font-normal pl-1 mr-4 items-center">
                             <BsFillPersonFill className=" mr-1" size="30" /> Sign In
                         </Button>
-                        <Button className="items-center">
+                        <Button className="items-center" onClick={() => navigation('/app/ticket')} >
                             <HiOutlineTicket size="35" className="pl-1" />
                         </Button>
                     </div>

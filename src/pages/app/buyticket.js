@@ -1,16 +1,22 @@
 import { useRouter } from "next/router";
 import { Button, useNumberInput, HStack, Input, Card, CardBody, CardFooter, Text, Heading, Stack } from "@chakra-ui/react";
 import Navbar from "../components/navbar";
-import Image from 'next/image'
+import Image from 'next/image';
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineTicket } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 
+import Confirmbuy from "../app/confirmbuy";
+
+import { useSearchParams, Routes, Route, useParams } from "react-router-dom";
+
 export default function BuyTicket() {
 
   const router = useRouter();
-  const navigation = (url) => router.push(url);
+  const navigation = (url) => {
+    router.push(url);
+  };
 
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
     useNumberInput({
@@ -25,49 +31,52 @@ export default function BuyTicket() {
   const dec = getDecrementButtonProps()
   const input = getInputProps()
 
+  console.log(input.value)
   return (
     <>
       <Navbar />
       <main className="flex flex-col justify-center items-center w-full gap-10 mb-5 mt-9">
-      <div className="grid grid-cols-6 gap-2 w-full justify-center items-center">
-        <Card className="col-start-2 col-span-4"
-          direction={{ base: 'column', sm: 'row' }}
-          overflow='hidden'
-          variant='outline'
-        >
-          <Image
-            maxW={{ base: '100%', sm: '200px' }}
-            src='/images/food.jpg'
-            width={450} height={200}
-          />
+        <div className="grid grid-cols-6 gap-2 w-full justify-center items-center">
+          <Card className="col-start-2 col-span-4"
+            direction={{ base: 'column', sm: 'row' }}
+            overflow='hidden'
+            variant='outline'
+          >
+            <Image
+              alt="Food"
+              maxW={{ base: '100%', sm: '200px' }}
+              src='/images/food.jpg'
+              width={450} height={200}
+            />
 
-          <Stack>
-            <CardBody className="ml-10">
-              <Heading size='lg'>ร้านไอสลัดผัก</Heading>
+            <Stack>
+              <CardBody className="ml-10">
+                <Heading size='lg'>ร้านไอสลัดผัก</Heading>
 
-              <Text py="2" className="flex items-center text-xl my-2"><IoLocationOutline className="mr-2 text-3xl" />: ข้างในใจเธอ</Text>
-              <Text className="flex items-center text-xl mb-3"><HiOutlineTicket className="mr-2 text-3xl" />: 450 บาท/1 คน</Text>
+                <Text py="2" className="flex items-center text-xl my-2"><IoLocationOutline className="mr-2 text-3xl" />: ข้างในใจเธอ</Text>
+                <Text className="flex items-center text-xl mb-3"><HiOutlineTicket className="mr-2 text-3xl" />: 450 บาท/1 คน</Text>
 
-              <HStack maxW='200px'>
-                <Button {...dec}>-</Button>
-                <Input {...input} />
-                <Button {...inc}>+</Button>
-              </HStack>
-              <Text className="flex justify-center items-center text-xl mt-3">ราคารวม {input.value * 450} บาท</Text>
+                <HStack maxW='200px'>
+                  <Button {...dec}>-</Button>
+                  <Input {...input} />
+                  <Button {...inc}>+</Button>
+                </HStack>
+                <Text className="flex justify-center items-center text-xl mt-3">ราคารวม {input.value * 450} บาท</Text>
 
-            </CardBody>
+              </CardBody>
 
-            <CardFooter>
-              <Button variant='solid' colorScheme='' className="bg-black ml-10" onClick={() => navigation('/app/confirmbuy')}>
-                Buy Ticket
-              </Button>
-            </CardFooter>
-          </Stack>
-        </Card>
+              <CardFooter>
+                <Button variant='solid' colorScheme='' className="bg-black ml-10"
+                  onClick={() => navigation('/app/confirmbuy')} >
+                  Buy Ticket
+                </Button>
+              </CardFooter>
+            </Stack>
+          </Card>
         </div>
 
         <div className="grid grid-cols-6 gap-2 w-full justify-center items-center">
-          <div className="col-start-2 col-span-3 bg-slate-200 p-3">
+          <div className="col-start-2 col-span-3 bg-slate-200 rounded p-3">
             <p className='flex text-3xl ml-3'>รายระเอียดบัตร</p>
           </div>
         </div>
