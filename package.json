@@ -1,4 +1,5 @@
 {
+  "packageManager": "pnpm@7.1.7",
   "name": "table_pass",
   "version": "0.1.0",
   "private": true,
