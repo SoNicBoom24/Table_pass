@@ -3,7 +3,7 @@ import {Card, CardBody, Text, Heading, LinkOverlay } from "@chakra-ui/react";
 import { HiOutlineTicket } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { useRouter } from "next/router";
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Card_Food() {
 

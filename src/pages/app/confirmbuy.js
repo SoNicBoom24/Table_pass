@@ -2,11 +2,14 @@ import React from "react";
 import Navbar from "../components/navbar";
 import { Card, CardBody, CardHeader, Stack, StackDivider, Text, Heading, Box, Input, Button, ButtonGroup } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import Image from 'next/image'
+import Image from 'next/image';
+
+import { useSearchParams, Routes, Route, useParams } from "react-router-dom";
 
 export default function Card_Food() {
 
     const router = useRouter();
+
     const navigation = (url) => router.push(url);
 
     return (
@@ -15,21 +18,11 @@ export default function Card_Food() {
             <main className="flex flex-col justify-center items-center w-full gap-10 mb-5 mt-9">
                 <div className="grid grid-cols-6 gap-2 w-full justify-center items-center">
                     <Card className="col-start-2 col-span-4">
-                        <CardHeader className="border-b-2">
+                        <CardHeader className="border-b-2 rounded">
                             <Heading size='lg'>รายระเอียดบัตร</Heading>
                         </CardHeader>
 
                         <CardBody>
-                            {/* <Stack divider={<StackDivider />} spacing='4'>
-                                <Box>
-                                    <Heading size='xs' textTransform='uppercase'>
-                                        Summary
-                                    </Heading>
-                                    <Text pt='2' fontSize='sm'>
-                                        View a summary of all your clients over the last month.
-                                    </Text>
-                                </Box>
-                            </Stack> */}
                             <div className="grid grid-cols-6 gap-2 w-full">
                                 <div className="col-span-2">
                                     <p className='text-2xl pb-10 flex'>ตั๋ว</p>
@@ -47,6 +40,7 @@ export default function Card_Food() {
                                 </div>
                                 <div className="col-span-2 justify-center items-center">
                                     <Image
+                                        alt="QR"
                                         src='/images/qrcode.png'
                                         width={410} height={410}
                                     />
