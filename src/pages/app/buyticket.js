@@ -17,6 +17,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineTicket } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
+import { auth, db } from "../api/firebase";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 
 export default function BuyTicket() {
   const router = useRouter();
@@ -34,13 +36,6 @@ export default function BuyTicket() {
   const dec = getDecrementButtonProps();
   const input = getInputProps();
 
-  const navigation = (url) => {
-    router.push({
-      pathname: url,
-      query: { ticket: input.value, name, price, people, totalPrice },
-    });
-  };
-
   const name = router.query.name;
   const location = router.query.location;
   const price = router.query.price;
@@ -48,6 +43,21 @@ export default function BuyTicket() {
 
   let people = input.value * eachPerson;
   let totalPrice = input.value * price;
+
+  const navigation = (url) => {
+    router.push({
+      pathname: url,
+      query: {
+        ticket: input.value,
+        name,
+        location,
+        price,
+        people,
+        totalPrice,
+        eachPerson,
+      },
+    });
+  };
   return (
     <>
       <Navbar />
