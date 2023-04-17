@@ -5,18 +5,10 @@ import Navbar from "./components/navbar";
 import Image from "next/image";
 import Card_Food from "./components/cardfood";
 
-// import { GoogleLogin } from '@react-oauth/google';
 
 export default function Home() {
   const router = useRouter();
   const navigation = (url) => router.push(url);
-
-  // const responseMessage = (response) => {
-  //   console.log(response);
-  // };
-  // const errorMessage = (error) => {
-  //   console.log(error);
-  // };
 
   return (
     <>

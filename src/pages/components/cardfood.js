@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Card_Food(props) {
   const router = useRouter();
-  //   const navigation = (url) => router.push(url);
+    // const navigation = (url) => router.push(url);
   const navigation = (url) => {
     router.push({
       pathname: url,
