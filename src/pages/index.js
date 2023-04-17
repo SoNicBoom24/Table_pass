@@ -5,9 +5,18 @@ import Navbar from "./components/navbar";
 import Image from "next/image";
 import Card_Food from "./components/cardfood";
 
+// import { GoogleLogin } from '@react-oauth/google';
+
 export default function Home() {
   const router = useRouter();
   const navigation = (url) => router.push(url);
+
+  // const responseMessage = (response) => {
+  //   console.log(response);
+  // };
+  // const errorMessage = (error) => {
+  //   console.log(error);
+  // };
 
   return (
     <>
@@ -15,6 +24,7 @@ export default function Home() {
       <main className="flex flex-col justify-center items-center w-full gap-14 mb-5 overflow-hidden">
         <>
           <div className="grid grid-cols-6 gap-2 w-full justify-center items-center h-[58rem] relative ">
+
             <div className="col-start-2 col-span-3 -mt-72">
               <p className="text-5xl pb-12 flex justify-center items-end">
                 The Meal With Queueless
