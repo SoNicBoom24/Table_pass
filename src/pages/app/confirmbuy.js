@@ -76,7 +76,7 @@ export default function Card_Food() {
         <div className="grid grid-cols-6 gap-2 w-full justify-center items-center">
           <Card className="col-start-2 col-span-4">
             <CardHeader className="border-b-2 rounded">
-              <Heading size="lg">รายระเอียดบัตร</Heading>
+              <Heading size="lg">รายระเอียดบัตรครับ</Heading>
             </CardHeader>
 
             <CardBody>
