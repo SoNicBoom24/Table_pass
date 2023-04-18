@@ -36,7 +36,7 @@ pipeline {
                     dir('Table_pass') {
                         echo "Current path is ${pwd()}"
                         
-                        sh "docker run -d -p 3000:8080 --name ${DOCKER_CONTAINER_NAME_FRONTEND} ${DOCKER_IMAGE_NAME_FRONTEND}"
+                        sh "docker run -d -p 8088:8080 --name ${DOCKER_CONTAINER_NAME_FRONTEND} ${DOCKER_IMAGE_NAME_FRONTEND}"
                     }
                 }
             }
